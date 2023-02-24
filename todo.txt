@@ -1,0 +1,3 @@
+# 1. header kurslar dialog
+# 2. footer 
+# 3. 
