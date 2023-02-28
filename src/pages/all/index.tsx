@@ -59,6 +59,7 @@ function All({headText,
                     position:'relative',
                     width: "100%",
                     textAlign: "center"
+          
                 }}>
                     <Stack    sx={{
                         width:"100%",
