@@ -1,7 +1,7 @@
 
  import EmailIcon from '@mui/icons-material/Email'
-// import FacebookIcon from '@mui/icons-material/Facebook'
-// import GoogleIcon from '@mui/icons-material/Google'
+ import FacebookIcon from '@mui/icons-material/Facebook'
+ import GoogleIcon from '@mui/icons-material/Google'
  import HttpsIcon from '@mui/icons-material/Https'
 // import { Box, Checkbox, Grid, InputAdornment, InputLabel, Paper, TextField, Typography } from "@mui/material"
 // import Link from '@mui/material/Link'
@@ -21,20 +21,25 @@ export const SignIn=()=>{
     return (
         <PageContainer >
            <All 
-           headText=""
+           headText="Daxil Olun"
            EmailTitle="Email"
           EmailIcon={<EmailIcon/>}
           NameTitle=""
           Name=""
           SecurityTitle="Sifre"
-          SecurityIcon={<HttpsIcon/>}
+          SecurityIcon={<HttpsIcon />}
           ChSecurityTitle=""
           ChSecurityIcon=""
-          FaceBook=""
-          FaceBookClr=""
-          Google=""
+          FaceBook={<FacebookIcon sx={{color:"white"}} />}
+          FaceBookClr="true"
+          Google={<GoogleIcon sx={{color:"white"}}/>}
           GoogleClr=""
           check="false"
+          NameCh=""
+            SecurityCh="true"
+            ChSecurityCh="true"
+            FaceBookCh="true"
+            GoogleCh="true"
             
            />
        </PageContainer>    

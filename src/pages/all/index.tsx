@@ -1,7 +1,5 @@
 
-import FacebookIcon from '@mui/icons-material/Facebook'
-import GoogleIcon from '@mui/icons-material/Google'
-import HttpsIcon from '@mui/icons-material/Https'
+
 import { Box, Checkbox, Grid, InputAdornment, InputLabel, Paper, TextField, Typography } from "@mui/material"
 import Link from '@mui/material/Link'
 import { Container, Stack } from '@mui/system'
@@ -18,14 +16,19 @@ interface Props{
     EmailIcon:React.ReactNode | String,
     NameTitle:String,
     Name:React.ReactNode | String,
+    NameCh:String
     SecurityTitle:String,
     SecurityIcon:React.ReactNode | String,
+    SecurityCh:String
     ChSecurityTitle:String,    
     ChSecurityIcon:React.ReactNode | String,
+    ChSecurityCh:String
     FaceBook:React.ReactNode | String,
     FaceBookClr:String,
+    FaceBookCh:String
     Google:React.ReactNode | String,
     GoogleClr:String,
+    GoogleCh:String
     check:Boolean | String 
 }
 
@@ -42,7 +45,12 @@ function All({headText,
    FaceBookClr,
    Google,
    GoogleClr,
-   check}:Props){
+   check,
+   NameCh,
+   SecurityCh,
+   ChSecurityCh,
+   FaceBookCh,  
+   GoogleCh}:Props){
     return(
         <Box sx={{ backgroundColor: "#f5f5f5", py: 4 }}>
         <Container maxWidth="lg" sx={{ py: 4 ,maxHeight:1200}} >
@@ -82,23 +90,106 @@ function All({headText,
                             fontWeight:"600",
                             color:'rgba(27, 34, 33, 1)'
                     }}>
-                            Salam
+                            {headText}
                         </Typography>
                         <Paper sx={{ padding: "20px", maxWidth: 450, margin: "0 auto" }} >
                           
-                            <Box sx={{
+    {    FaceBookClr=="true" ?  <Box sx={{
                                 color: "black",
                                 fontWeight: 600,
                                 padding: '10px 0'
                             }}>
-                               
-                            </Box>
-                            <Box sx={{
+                               <TextField fullWidth
+                sx={{
+                    '& input': {
+                        paddingLeft: '40px'
+                    }
+                }}
+                placeholder="FaceBook Ile Daxil Olun"
+                InputProps={{
+                    
+                    startAdornment: <Box
+                        sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            height: '100%',
+                            width: 50,
+                            backgroundColor: "#395185",
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderTopLeftRadius: 'inherit',
+                            borderBottomLeftRadius: 'inherit'
+                        }}
+                        
+                    >
+                        {FaceBook}
+                    </Box>
+                }}
+            />
+                            </Box> : ""}
+                        
+                                { GoogleCh=="true" ?
+                                 <Box sx={{
                                 color: "black",
-                                fontWeight: 600, padding: '10px 0'
+                                fontWeight: 600,
+                                padding: '10px 0'
                             }}>
+                              <TextField fullWidth
+                sx={{
+                    '& input': {
+                        paddingLeft: '40px'
+                    }
+                }}
+                placeholder="Google Ile Daxil Olun"
+                InputProps={{
+                    
+                    startAdornment: <Box
+                        sx={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            height: '100%',
+                            width: 50,
+                            backgroundColor: "#E93E32",
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderTopLeftRadius: 'inherit',
+                            borderBottomLeftRadius: 'inherit'
+                        }}
+                        
+                    >
+                        {Google}
+                    </Box>
+                }}
+            />
                             </Box>
-                            <Box>
+:" "     }
+{
+    NameCh=="true" ?<Box>
+    <InputLabel sx={{
+        color: "black",
+        fontWeight: 600,
+        padding: '10px 0'
+    }}>
+        {NameTitle}
+    </InputLabel>
+    <TextField fullWidth
+        placeholder="Email ünvanı"
+        InputProps={{
+            startAdornment:
+                <InputAdornment position="start">
+                    {Name}
+                </InputAdornment>,
+        }}
+
+    />
+</Box> :" "
+}
+
+                         <Box>
                                 <InputLabel sx={{
                                     color: "black",
                                     fontWeight: 600,
@@ -118,7 +209,7 @@ function All({headText,
                                 />
                             </Box>
 
-                            <Box sx={{ padding: "20px 0" }}>
+                            {SecurityCh=="true" ? <Box sx={{ padding: "20px 0" }}>
                                              <InputLabel sx={{
                                     color: "black",
                                     fontWeight: 600,
@@ -136,7 +227,7 @@ function All({headText,
                                     }}
 
                                 />  
-                            </Box>
+                            </Box> : ""}
                             <Stack direction={"row"} justifyContent="space-between" >
                                 <Box>
                                     <Checkbox />
