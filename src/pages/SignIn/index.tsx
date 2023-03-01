@@ -21,6 +21,7 @@ export const SignIn=()=>{
     return (
         <PageContainer >
            <All 
+           checkText="Yadda Saxla"
            headText="Daxil Olun"
            EmailTitle="Email"
           EmailIcon={<EmailIcon/>}

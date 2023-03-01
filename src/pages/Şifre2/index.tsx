@@ -1,29 +1,30 @@
 import PageContainer from "components/PageContainer";
 import All from "pages/all";
 
-
-function Sifre1() {
+import HttpsIcon from '@mui/icons-material/Https'
+import EmailIcon from '@mui/icons-material/Email'
+function Sifre2() {
 	return(
 		<PageContainer>
   <All
      	headText="Sifrenin Yenilenmesi	"
-          EmailTitle="Email"
-          EmailIcon=""
-          checkText=""
+          EmailTitle="Email-e Gelen Kodu"
+          EmailIcon={<EmailIcon/>}
           NameTitle="Adiniz Ve Soyadiniz"
           Name=""
           SecurityTitle="Sifre"
-          SecurityIcon=""
+		checkText=""
+          SecurityIcon={<HttpsIcon/>}
           ChSecurityTitle="Sifrenin Tekrari"
-          ChSecurityIcon=""
+          ChSecurityIcon={<HttpsIcon/>}
           FaceBook=""
           FaceBookClr=""
           Google=""
           GoogleClr=""
           check="true"
 		NameCh=""
-		SecurityCh=""
-		ChSecurityCh=""
+		SecurityCh="true"
+		ChSecurityCh="true"
 		FaceBookCh=""
 		GoogleCh=""
            />
@@ -32,4 +33,4 @@ function Sifre1() {
 	)
 }
 
-export default Sifre1
+export default Sifre2

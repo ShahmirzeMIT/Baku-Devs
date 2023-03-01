@@ -1,6 +1,6 @@
 
 
-import { Box, Checkbox, Grid, InputAdornment, InputLabel, Paper, TextField, Typography } from "@mui/material"
+import { Box, Checkbox, FormControlLabel, Grid, InputAdornment, InputLabel, Paper, TextField, Typography } from "@mui/material"
 import Link from '@mui/material/Link'
 import { Container, Stack } from '@mui/system'
 
@@ -29,13 +29,15 @@ interface Props{
     Google:React.ReactNode | String,
     GoogleClr:String,
     GoogleCh:String
-    check:Boolean | String 
+    check:Boolean | String ,
+    checkText:String
 }
 
 function All({headText,
     EmailTitle,
    EmailIcon,
    NameTitle,
+   checkText,
    Name,
    SecurityTitle,
    SecurityIcon,
@@ -229,9 +231,35 @@ function All({headText,
 
                                 />  
                             </Box> : ""}
+                            {ChSecurityCh=="true" ? <Box sx={{ padding: "20px 0" }}>
+                                             <InputLabel sx={{
+                                    color: "black",
+                                    fontWeight: 600,
+                                    padding: '10px 0'
+                                }}>
+                                    {ChSecurityTitle}
+                                </InputLabel>
+                                <TextField fullWidth
+                                    placeholder="Sifreni Daxil et"
+                                    InputProps={{
+                                        startAdornment:
+                                            <InputAdornment position="start">
+                                                {ChSecurityIcon}
+                                            </InputAdornment>,
+                                    }}
+
+                                />  
+                            </Box> : ""}
                             <Stack direction={"row"} justifyContent="space-between" >
                                 <Box>
-                                    <Checkbox />
+                                    
+                                <FormControlLabel
+                                    control={
+                                    <Checkbox  />
+                                    }
+                                    label={checkText}
+                                />
+                                   
                                 </Box>
                                 <Typography sx={{
                                     marginTop: '12px'

@@ -12,6 +12,7 @@ function SignUp(){
            <All 
            headText="Daxil Olun"
            EmailTitle="Email"
+           checkText=""
           EmailIcon={<EmailIcon/>}
           NameTitle="Adiniz Ve Soyadiniz"
           Name={<PersonIcon/>}

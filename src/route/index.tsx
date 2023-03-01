@@ -6,6 +6,7 @@ import Home from 'pages/Home';
 import {SignIn} from 'pages/SignIn';
 import SignUp from 'pages/SignUp';
 import Sifre1 from 'pages/Şifre1';
+import Sifre2 from 'pages/Şifre2';
 const Routing = () => {
     return (
         <Routes>
@@ -16,6 +17,7 @@ const Routing = () => {
             <Route path='/signin' element={<SignIn />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/sifre1' element={<Sifre1 />} />
+            <Route path='/sifre2' element={<Sifre2 />} />
         </Routes>
     )
 }
